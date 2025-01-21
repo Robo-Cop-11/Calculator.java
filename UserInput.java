@@ -1,12 +1,14 @@
 import java.util.Scanner;
 
 public class UserInput {
+    // Method to start the calculator menu and handle user choices
     public void startCalculator() {
         Scanner scan = new Scanner(System.in);
         Calculator calculator = new Calculator();
         int choice;
 
         do {
+            // Display calculator menu
             System.out.println("\n--- Calculator Menu ---");
             System.out.println("1. Addition");
             System.out.println("2. Subtraction");
@@ -19,6 +21,7 @@ public class UserInput {
             System.out.print("Enter your choice: ");
             choice = scan.nextInt();
 
+            // Handle operations using switch-case
             switch (choice) {
                 case 1:
                     int[] additionInput = inputTwoNumbers();
@@ -58,6 +61,7 @@ public class UserInput {
         } while (choice != 8);
     }
 
+    // Method to input two numbers for operations
     public int[] inputTwoNumbers() {
         Scanner scan = new Scanner(System.in);
         int[] numbers = new int[2];
@@ -68,6 +72,7 @@ public class UserInput {
         return numbers;
     }
 
+    // Method to input an array of numbers
     public int[] inputArray() {
         Scanner scan = new Scanner(System.in);
         System.out.print("Enter the number of elements: ");
